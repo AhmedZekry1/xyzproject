@@ -265,7 +265,15 @@ function TransactionListView() {
 // Main Page Component
 export default function Page() {
   return (
-    <div className="min-h-screen bg-[url('/factory.png')] bg-no-repeat bg-center bg-cover">
+    <div
+      className="min-h-screen bg-no-repeat"
+      style={{
+        backgroundImage: "url('/factory.jpg')",
+        backgroundSize: "35%", // or 'cover', '100%', etc.
+        backgroundPosition: "left", // Moves the image to the right
+        backgroundRepeat: "no-repeat", // Ensures no repeating
+      }}
+    >
       <h1 className="text-center text-3xl font-bold mt-8">Inventory Management</h1>
       <AddItemForm />
       <ItemListView />
@@ -274,4 +282,3 @@ export default function Page() {
     </div>
   );
 }
-
